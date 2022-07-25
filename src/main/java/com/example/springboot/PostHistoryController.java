@@ -33,12 +33,6 @@ public class PostHistoryController {
     @RequestMapping(value = "/api")
     public String postString(@RequestParam("post_input_text") String inputTest,
                              Model model) throws IOException {
-//        File f = new File("/Users/ilyazlatkin/PycharmProjects/results/blockchain/regression_1/1_html_report.html");
-//        try {
-//            Files.copy(f.toPath(), (new File( f.getName())).toPath() , StandardCopyOption.REPLACE_EXISTING);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
         model.addAttribute("title","Test Gen Page");
         System.out.println(inputTest);
         try (PrintWriter out = new PrintWriter("test.sol")) {
@@ -47,11 +41,9 @@ public class PostHistoryController {
             e.printStackTrace();
         }
         ProcessBuilder builder = new ProcessBuilder();
-//        builder.command("/Users/ilyazlatkin/CLionProjects/blockchain_exp/hello_foundry/scripts/RunAll.py",
-//                "-i", "test.sol", "src/main/resources/templates/regression_1");
         try {
-            //Process p = Runtime.getRuntime().exec("python3 /Users/ilyazlatkin/CLionProjects/blockchain_exp/hello_foundry/scripts/RunAll.py -i test.sol -o /Users/ilyazlatkin/IdeaProjects/springboot_test/src/main/resources/templates/regression_1");
-            Process p = Runtime.getRuntime().exec("python3 /Users/ilyazlatkin/CLionProjects/blockchain_exp/hello_foundry/scripts/RunAll.py -i test.sol -o /Users/ilyazlatkin/IdeaProjects/springboot_test/build/resources/main/templates/regression_1");
+            Process p = Runtime.getRuntime().exec("python3 /Users/ilyazlatkin/CLionProjects/blockchain_exp/hello_foundry/scripts/RunAll.py " +
+                    "-i test.sol -o /Users/ilyazlatkin/IdeaProjects/springboot_tg/build/resources/main/templates/regression_1");
 
             System.out.println("Waiting the script");
             p.waitFor();
