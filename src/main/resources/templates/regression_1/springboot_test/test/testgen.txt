@@ -1,0 +1,4 @@
+NEW TEST 1
+contractC()
+test(0, 2)
+END TEST 2

@@ -1,0 +1,343 @@
+[18:34:11:866472]
+[[['C', 'contract'], ['test', 'uint256', 'a', 'uint256', 'b']]]
+[18:35:08:366548]
+/Users/ilyazlatkin/CLionProjects/adt_transform/target/debug/adt_transform /Users/ilyazlatkin/CLionProjects/blockchain_exp/hello_foundry/sandbox/test.smt2
+[18:35:12:238735]
+/Users/ilyazlatkin/CLionProjects/adt_transform/target/debug/adt_transform /Users/ilyazlatkin/CLionProjects/blockchain_exp/hello_foundry/sandbox/test.smt2
+0
+None
+b''
+
+[18:35:12:241726]
+run TG with
+[18:35:12:242119]
+/Users/ilyazlatkin/CLionProjects/aeval/cmake-build-debug/tools/nonlin/tgnonlin --keys contract_C:^test:a,b /Users/ilyazlatkin/CLionProjects/blockchain_exp/hello_foundry/sandbox/test_wo_adt.smt2
+[18:35:12:242741]
+/Users/ilyazlatkin/CLionProjects/aeval/cmake-build-debug/tools/nonlin/tgnonlin --keys contract_C:^test:a,b /Users/ilyazlatkin/CLionProjects/blockchain_exp/hello_foundry/sandbox/test_wo_adt.smt2
+cycle found (#1):
+    nondet_interface_1_C_63_0 /\ summary_4_function_test__26_63_0 /\   [arity 2] -> nondet_interface_1_C_63_0
+fact found (#0):
+  INIT:
+      [arity 0] -> nondet_interface_1_C_63_0
+TODOs : 
+20 : block_19_nested_if_61_63_0
+24 : block_16_return_function_nested_if__62_63_0
+25 : block_19_nested_if_61_63_0
+29 : block_16_return_function_nested_if__62_63_0
+30 : block_16_return_function_nested_if__62_63_0
+new iter with cur_bnd = 1
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling sat
+-1 2 3 4 8 10 11 14 15 16 17 18 19 21 22 24 31 39 
+ chc: summary_4_function_test__26_63_0(140)   -> error_target_4_0(1025)
+ chc: block_13_function_test__26_63_0(529)summary_3_function_test__26_63_0(252)   -> summary_4_function_test__26_63_0(140)
+ chc:    -> block_13_function_test__26_63_0(529)
+ chc: block_12_function_test__26_63_0(506)   -> summary_3_function_test__26_63_0(252)
+ chc: block_7_test_25_63_0(171)summary_11_function_nested_if__62_63_0(355)summary_9_function_nested_if__62_63_0(211)   -> block_12_function_test__26_63_0(506)
+ chc: block_6_function_test__26_63_0(156)   -> block_7_test_25_63_0(171)
+ chc:    -> block_6_function_test__26_63_0(156)
+ chc: summary_5_function_nested_if__62_63_0(208)   -> summary_11_function_nested_if__62_63_0(355)
+ chc: block_16_return_function_nested_if__62_63_0(799)   -> summary_5_function_nested_if__62_63_0(208)
+ chc: block_21_if_true_nested_if_43_63_0(772)   -> block_16_return_function_nested_if__62_63_0(799)
+ chc: block_20_if_header_nested_if_44_63_0(741)   -> block_21_if_true_nested_if_43_63_0(772)
+ chc: block_18_if_true_nested_if_45_63_0(727)   -> block_20_if_header_nested_if_44_63_0(741)
+ chc: block_17_if_header_nested_if_46_63_0(695)   -> block_18_if_true_nested_if_45_63_0(727)
+ chc: block_15_nested_if_61_63_0(678)   -> block_17_if_header_nested_if_46_63_0(695)
+ chc: block_14_function_nested_if__62_63_0(666)   -> block_15_nested_if_61_63_0(678)
+ chc:    -> block_14_function_nested_if__62_63_0(666)
+ chc: summary_5_function_nested_if__62_63_0(208)   -> summary_9_function_nested_if__62_63_0(211)
+ chc: block_16_return_function_nested_if__62_63_0(799)   -> summary_5_function_nested_if__62_63_0(208)
+ chc: block_21_if_true_nested_if_43_63_0(772)   -> block_16_return_function_nested_if__62_63_0(799)
+ chc: block_20_if_header_nested_if_44_63_0(741)   -> block_21_if_true_nested_if_43_63_0(772)
+ chc: block_18_if_true_nested_if_45_63_0(727)   -> block_20_if_header_nested_if_44_63_0(741)
+ chc: block_17_if_header_nested_if_46_63_0(695)   -> block_18_if_true_nested_if_45_63_0(727)
+ chc: block_15_nested_if_61_63_0(678)   -> block_17_if_header_nested_if_46_63_0(695)
+ chc: block_14_function_nested_if__62_63_0(666)   -> block_15_nested_if_61_63_0(678)
+ chc:    -> block_14_function_nested_if__62_63_0(666)
+FOUND: 24 # number_of_found_branches: 0
+ToDos: 20 25 29 30 
+MODEL : 
+chcs 
+0 srs:  dst: 67 : nondet_interface_1_C_63_0 isQuery : 0
+1 srs:  67 140 dst: 67 : nondet_interface_1_C_63_0 isQuery : 0
+2 srs:  dst: 156 : block_6_function_test__26_63_0 isQuery : 0
+3 srs:  156 dst: 171 : block_7_test_25_63_0 isQuery : 0
+4 srs:  208 dst: 211 : summary_9_function_nested_if__62_63_0 isQuery : 0
+5 srs:  171 211 dst: 252 : summary_3_function_test__26_63_0 isQuery : 0
+6 srs:  171 211 dst: 322 : block_10_function_test__26_63_0 isQuery : 0
+7 srs:  322 dst: 252 : summary_3_function_test__26_63_0 isQuery : 0
+8 srs:  208 dst: 355 : summary_11_function_nested_if__62_63_0 isQuery : 0
+9 srs:  171 355 211 dst: 252 : summary_3_function_test__26_63_0 isQuery : 0
+10 srs:  171 355 211 dst: 506 : block_12_function_test__26_63_0 isQuery : 0
+11 srs:  506 dst: 252 : summary_3_function_test__26_63_0 isQuery : 0
+12 srs:  171 355 211 dst: 518 : block_8_return_function_test__26_63_0 isQuery : 0
+13 srs:  518 dst: 252 : summary_3_function_test__26_63_0 isQuery : 0
+14 srs:  dst: 529 : block_13_function_test__26_63_0 isQuery : 0
+15 srs:  529 252 dst: 140 : summary_4_function_test__26_63_0 isQuery : 0
+16 srs:  dst: 666 : block_14_function_nested_if__62_63_0 isQuery : 0
+17 srs:  666 dst: 678 : block_15_nested_if_61_63_0 isQuery : 0
+18 srs:  678 dst: 695 : block_17_if_header_nested_if_46_63_0 isQuery : 0
+19 srs:  695 dst: 727 : block_18_if_true_nested_if_45_63_0 isQuery : 0
+20 srs:  695 dst: 734 : block_19_nested_if_61_63_0 isQuery : 0
+21 srs:  727 dst: 741 : block_20_if_header_nested_if_44_63_0 isQuery : 0
+22 srs:  741 dst: 772 : block_21_if_true_nested_if_43_63_0 isQuery : 0
+23 srs:  741 dst: 778 : block_22_nested_if_61_63_0 isQuery : 0
+24 srs:  772 dst: 799 : block_16_return_function_nested_if__62_63_0 isQuery : 0
+25 srs:  778 dst: 734 : block_19_nested_if_61_63_0 isQuery : 0
+26 srs:  734 dst: 820 : block_24_if_header_nested_if_60_63_0 isQuery : 0
+27 srs:  820 dst: 878 : block_25_if_true_nested_if_56_63_0 isQuery : 0
+28 srs:  820 dst: 884 : block_26_if_false_nested_if_59_63_0 isQuery : 0
+29 srs:  878 dst: 799 : block_16_return_function_nested_if__62_63_0 isQuery : 0
+30 srs:  884 dst: 799 : block_16_return_function_nested_if__62_63_0 isQuery : 0
+31 srs:  799 dst: 208 : summary_5_function_nested_if__62_63_0 isQuery : 0
+32 srs:  dst: 962 : contract_initializer_entry_31_C_63_0 isQuery : 0
+33 srs:  962 dst: 969 : contract_initializer_after_init_32_C_63_0 isQuery : 0
+34 srs:  969 dst: 976 : contract_initializer_30_C_63_0 isQuery : 0
+35 srs:  dst: 984 : implicit_constructor_entry_33_C_63_0 isQuery : 0
+36 srs:  984 976 dst: 994 : summary_constructor_2_C_63_0 isQuery : 0
+37 srs:  984 976 dst: 994 : summary_constructor_2_C_63_0 isQuery : 0
+38 srs:  994 dst: 648 : interface_0_C_63_0 isQuery : 0
+39 srs:  140 dst: 1025 : error_target_4_0 isQuery : 1
+index_cycle_chc : 1
+decls 
+0 left: 67 right: 2
+1 left: 140 right: 2
+2 left: 156 right: 2
+3 left: 171 right: 2
+4 left: 208 right: 2
+5 left: 211 right: 2
+6 left: 252 right: 2
+7 left: 322 right: 2
+8 left: 355 right: 2
+9 left: 506 right: 2
+10 left: 518 right: 2
+11 left: 529 right: 2
+12 left: 648 right: 2
+13 left: 666 right: 2
+14 left: 678 right: 2
+15 left: 695 right: 2
+16 left: 727 right: 2
+17 left: 734 right: 2
+18 left: 741 right: 2
+19 left: 772 right: 2
+20 left: 778 right: 2
+21 left: 799 right: 2
+22 left: 820 right: 2
+23 left: 878 right: 2
+24 left: 884 right: 2
+25 left: 962 right: 2
+26 left: 969 right: 2
+27 left: 976 right: 2
+28 left: 984 right: 2
+29 left: 994 right: 2
+expr_id 
+0 first: 67 second: 1
+1 first: 140 second: 15
+2 first: 156 second: 2
+3 first: 171 second: 3
+4 first: 208 second: 36
+5 first: 211 second: 4
+6 first: 252 second: 13
+7 first: 322 second: 6
+8 first: 355 second: 8
+9 first: 506 second: 10
+10 first: 518 second: 12
+11 first: 529 second: 14
+12 first: 648 second: 43
+13 first: 666 second: 17
+14 first: 678 second: 18
+15 first: 695 second: 19
+16 first: 727 second: 20
+17 first: 734 second: 27
+18 first: 741 second: 22
+19 first: 772 second: 23
+20 first: 778 second: 26
+21 first: 799 second: 35
+22 first: 820 second: 28
+23 first: 878 second: 29
+24 first: 884 second: 30
+25 first: 916 second: 34
+26 first: 962 second: 37
+27 first: 969 second: 38
+28 first: 976 second: 39
+29 first: 984 second: 40
+30 first: 994 second: 42
+0 : 
+ crypto_0_ecrecover_21
+ crypto_0_keccak256_22
+ crypto_0_ripemd160_23
+ crypto_0_sha256_24
+ state_0_balances_0
+ this_0
+ a_2_0
+ b_4_0
+ error_1
+ tx_0_block.basefee_3
+ tx_0_block.chainid_4
+ tx_0_block.coinbase_5
+ tx_0_block.difficulty_6
+ tx_0_block.gaslimit_7
+ tx_0_block.number_8
+ tx_0_block.timestamp_9
+ tx_0_blockhash_10
+ tx_0_msg.data_11_bytes_tuple_accessor_array_1
+ tx_0_msg.data_11_bytes_tuple_accessor_length_2
+ tx_0_msg.sender_12
+ tx_0_msg.sig_13
+ tx_0_msg.value_14
+ tx_0_tx.gasprice_15
+ tx_0_tx.origin_16
+ a_2_2
+ b_4_2
+ state_3_balances_0
+
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling unsat
+unrolling[18:35:42:639412]
+/Users/ilyazlatkin/CLionProjects/aeval/cmake-build-debug/tools/nonlin/tgnonlin --keys contract_C:^test:a,b /Users/ilyazlatkin/CLionProjects/blockchain_exp/hello_foundry/sandbox/test_wo_adt.smt2
+-9
+None
+b'Multiple queries are not supported
+'
+
+[18:35:42:657970]
+Multiple Calls Test
+[18:35:42:658249]
+contractC() test(0, 2)
+[18:35:42:658480]
+# TESTS: 1
+[18:35:43:203565]
+new signature[[['C', 'contract'], ['test', 'uint256', 'a', 'uint256', 'b']]]
+[18:35:43:205878]
+/Users/ilyazlatkin/.cargo/bin/forge clean
+[18:35:46:102512]
+/Users/ilyazlatkin/.cargo/bin/forge clean
+0
+None
+b'\x1b[1;33mwarning\x1b[0m\x1b[1m:\x1b[0m Unknown section [default] found in foundry.toml. This notation for profiles has been deprecated and may result in the profile not being registered in future versions. Please use [profile.default] instead or run `forge config --fix`.
+'
+
+[18:35:46:103855]
+/Users/ilyazlatkin/.cargo/bin/forge test --match test
+[18:35:52:252200]
+/Users/ilyazlatkin/.cargo/bin/forge test --match test
+1
+None
+b'\x1b[1;33mwarning\x1b[0m\x1b[1m:\x1b[0m Unknown section [default] found in foundry.toml. This notation for profiles has been deprecated and may result in the profile not being registered in future versions. Please use [profile.default] instead or run `forge config --fix`.
+Error: 
+\x1b[31mCompiler run failed
+warning[3420]: Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.8.14;"
+--> src/test.sol
+
+
+
+warning[3420]: Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.8.14;"
+--> test/test.t.sol
+
+
+
+error[9582]: TypeError: Member "contractC" not found or not visible after argument-dependent lookup in contract C.
+  --> test/test.t.sol:12:3:
+   |
+12 | \t\tc0.contractC();
+   | \t\t^^^^^^^^^^^^
+
+
+\x1b[0m
+'
+
+[18:35:52:253539]
+/Users/ilyazlatkin/.cargo/bin/forge coverage --match test --report lcov
+[18:35:53:586381]
+/Users/ilyazlatkin/.cargo/bin/forge coverage --match test --report lcov
+1
+None
+b'\x1b[1;33mwarning\x1b[0m\x1b[1m:\x1b[0m Unknown section [default] found in foundry.toml. This notation for profiles has been deprecated and may result in the profile not being registered in future versions. Please use [profile.default] instead or run `forge config --fix`.
+Error: 
+\x1b[31mCompiler run failed
+warning[3420]: Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.8.14;"
+--> src/test.sol
+
+
+
+warning[3420]: Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.8.14;"
+--> test/test.t.sol
+
+
+
+error[9582]: TypeError: Member "contractC" not found or not visible after argument-dependent lookup in contract C.
+  --> test/test.t.sol:12:3:
+   |
+12 | \t\tc0.contractC();
+   | \t\t^^^^^^^^^^^^
+
+
+\x1b[0m
+'
+
+[18:35:53:586864]
+/Users/ilyazlatkin/.cargo/bin/forge coverage --match test --report summary
+[18:35:54:607217]
+/Users/ilyazlatkin/.cargo/bin/forge coverage --match test --report summary
+1
+None
+b'\x1b[1;33mwarning\x1b[0m\x1b[1m:\x1b[0m Unknown section [default] found in foundry.toml. This notation for profiles has been deprecated and may result in the profile not being registered in future versions. Please use [profile.default] instead or run `forge config --fix`.
+Error: 
+\x1b[31mCompiler run failed
+warning[3420]: Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.8.14;"
+--> src/test.sol
+
+
+
+warning[3420]: Warning: Source file does not specify required compiler version! Consider adding "pragma solidity ^0.8.14;"
+--> test/test.t.sol
+
+
+
+error[9582]: TypeError: Member "contractC" not found or not visible after argument-dependent lookup in contract C.
+  --> test/test.t.sol:12:3:
+   |
+12 | \t\tc0.contractC();
+   | \t\t^^^^^^^^^^^^
+
+
+\x1b[0m
+'
+
+[18:35:54:619823]
+total time: 104.22880792617798 seconds
